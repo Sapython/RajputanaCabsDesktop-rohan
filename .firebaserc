@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "indiatoursandcabs": {
+      "hosting": {
+        "RajputanaCabsDesktop": [
+          "indiatoursandcabs"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "indiatoursandcabs"
+  }
+}

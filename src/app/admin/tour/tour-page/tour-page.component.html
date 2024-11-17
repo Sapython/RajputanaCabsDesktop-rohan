@@ -1,0 +1,209 @@
+<div id="tour_Cont">
+  <div id="head">
+    <div id="toggle">
+      <i class="ri-toggle-line" *ngIf="active" (click)="toggleActive()"></i>
+      <i class="ri-toggle-fill" *ngIf="!active" (click)="toggleActive()"></i>
+      <p>Set As Active</p>
+    </div>
+    <div class="editCards">
+      <button>
+        <i class="fa-regular fa-circle-stop"></i>
+      </button>
+      <button routerLink="../edit/:id">
+        <i class="fa-regular fa-pen-to-square"></i>
+      </button>
+      <button  uk-toggle="target: #delete-modal">
+        <i class="fa-solid fa-trash" style="color: red"></i>
+      </button>
+    </div>
+  </div>
+  <div id="tour">
+    <div class="card">
+      <img src="{{ imageSrc }}" alt="" />
+    </div>
+    <div class="card2">
+      <div class="h1">
+        <h2>Delhi Agra</h2>
+        <b>$300</b>
+      </div>
+      <p>2 Days - 1 Night</p>
+      <h3>A Journey into the nature</h3>
+      <div
+        class="startEnd"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        "
+      >
+        <h4>Start Location: Jaipur</h4>
+        <h4>End Location: Delhi</h4>
+      </div>
+      No. Of Stoppage : 4
+      <div class="images">
+        <div
+          class="image"
+          *ngFor="let imageButton of imageButtons"
+          (click)="onClick(imageButton)"
+        >
+          <img [src]="imageButton.src" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="tour_details">
+    <div id="maps_tour">
+        <b class="head11">Itinerary</b>
+      <mat-vertical-stepper>
+        <mat-step label="Day 1" >
+          <b>Delhi – Agra (2 Nights)</b>
+          <p>
+            Tour guests will arrive at Delhi airport as per their scheduled
+            flight. Upon arrival they will meet Veena World tour manager at the
+            airport and proceed to Agra – a city on the banks of the Yamuna
+            River. Upon arrival we visit Mehtab bagh – a beautiful garden
+            overlooking the Agra Fort and Yamuna River, provides a
+            picture-perfect view of the Taj. In the evening we have a short Meet
+            & Greet session
+          </p>
+          <div style="background-color: rgba(221, 221, 221, 0.7);border-radius:.5rem;width: 100%;height: fit-content;display: flex;padding: .5rem;flex-direction: column;">
+            <div class="box" style="color: #404B69;font-size: 1rem;">
+                <i class="fa-solid fa-utensils" style="margin:.7rem 1rem;"></i>
+              Dinner
+            </div>
+            <div class="box" style="color: #404B69;font-size: 1rem;">
+                <i class="fa-solid fa-cookie-bite" style="margin: .7rem 1rem;"></i>
+                Dry Snack En Rout To Agra
+            </div>
+          </div>
+        </mat-step>
+
+        <mat-step label="Day 2" >
+            <b>Agra</b>
+            <p>
+              Tour guests will arrive at Delhi airport as per their scheduled
+              flight. Upon arrival they will meet Veena World tour manager at the
+              airport and proceed to Agra – a city on the banks of the Yamuna
+              River. Upon arrival we visit Mehtab bagh – a beautiful garden
+              overlooking the Agra Fort and Yamuna River, provides a
+              picture-perfect view of the Taj. In the evening we have a short Meet
+              & Greet session
+            </p>
+            <div style="background-color: rgba(221, 221, 221, 0.7);border-radius:.5rem;width: 100%;height: fit-content;display: flex;padding: .5rem;flex-direction: column;">
+              <div class="box" style="color: #404B69;font-size: 1rem;">
+                  <i class="fa-solid fa-utensils" style="margin:.7rem 1rem;"></i>
+                Dinner
+              </div>
+              
+            </div>
+          </mat-step>
+
+        
+          <mat-step label="Day 3" >
+            <b>Agra - Fatehpur Sikri - Mathura - 
+                Vrindavan - Delhi (2 Nights)</b>
+            <p>
+              Tour guests will arrive at Delhi airport as per their scheduled
+              flight. Upon arrival they will meet Veena World tour manager at the
+              airport and proceed to Agra – a city on the banks of the Yamuna
+              River. Upon arrival we visit Mehtab bagh – a beautiful garden
+              overlooking the Agra Fort and Yamuna River, provides a
+              picture-perfect view of the Taj. In the evening we have a short Meet
+              & Greet session
+            </p>
+            <div style="background-color: rgba(221, 221, 221, 0.7);border-radius:.5rem;width: 100%;height: fit-content;display: flex;padding: .5rem;flex-direction: column;">
+              <div class="box" style="color: #404B69;font-size: 1rem;">
+                  <i class="fa-solid fa-utensils" style="margin:.7rem 1rem;"></i>
+                Dinner
+              </div>
+              
+            </div>
+          </mat-step>
+          
+        <mat-step label="Day 4" >
+            <b>Delhi</b>
+            <p>
+              Tour guests will arrive at Delhi airport as per their scheduled
+              flight. Upon arrival they will meet Veena World tour manager at the
+              airport and proceed to Agra – a city on the banks of the Yamuna
+              River. Upon arrival we visit Mehtab bagh – a beautiful garden
+              overlooking the Agra Fort and Yamuna River, provides a
+              picture-perfect view of the Taj. In the evening we have a short Meet
+              & Greet session
+            </p>
+            <div style="background-color: rgba(221, 221, 221, 0.7);border-radius:.5rem;width: 100%;height: fit-content;display: flex;padding: .5rem;flex-direction: column;">
+              <div class="box" style="color: #404B69;font-size: 1rem;">
+                  <i class="fa-solid fa-utensils" style="margin:.7rem 1rem;"></i>
+                Dinner
+              </div>
+              
+            </div>
+          </mat-step>
+          <mat-step label="Day 5" >
+            <b>Delhi</b>
+            <p>
+              Tour guests will arrive at Delhi airport as per their scheduled
+                flight. Upon arrival they will meet Veena World tour manager at the
+            </p>
+            <div style="background-color: rgba(221, 221, 221, 0.7);border-radius:.5rem;width: 100%;height: fit-content;display: flex;padding: .5rem;flex-direction: column;">
+              <div class="box" style="color: #404B69;font-size: 1rem;">
+                  <i class="fa-solid fa-utensils" style="margin:.7rem 1rem;"></i>
+                Dinner
+              </div>
+              
+            </div>
+          </mat-step>
+        <form>
+          <ng-template matStepperIcon="edit">
+            <mat-icon> location_on</mat-icon>
+          </ng-template>
+        </form>
+      </mat-vertical-stepper>
+    </div>
+    <div id="table">
+        <b class="head11">Detailed Tour Price</b>
+        <table>
+            <thead>
+                <tr>
+                    <th>Room Type</th>
+                    <th>Basic Price</th>
+                </tr>
+                
+            </thead>
+          <tbody>
+              
+              <tr>
+                  <th>Deluxe Room</th>
+                  <th>₹46,000</th>
+                </tr>
+                <tr>
+                    <th>Super Deluxe Room</th>
+                    <th>Rs. 1,00,000</th>
+                </tr>
+                <tr>
+                    <th>Deluxe Room</th>
+                    <th>Rs. 1,00,000</th>
+                </tr>
+                <tr>
+                    <th>Single Occupancy</th>
+                    <th>Rs. 1,00,000</th>
+                </tr>
+                <tr>
+                    <th>Super Deluxe Room</th>
+                    <th>Rs. 1,00,000</th>
+                </tr>
+                <tr>
+                    <th>Deluxe Room</th>
+                    <th>Rs. 1,00,000</th>
+                </tr>
+                <tr>
+                    <th>Single Occupancy</th>
+                    <th>Rs. 1,00,000</th>
+                </tr>
+            </tbody> 
+           
+        </table>
+    </div>
+  </div>
+</div>
+<app-delete-modal></app-delete-modal>

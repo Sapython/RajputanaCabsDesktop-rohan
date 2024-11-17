@@ -1,0 +1,180 @@
+<main>
+  
+    <header>
+        
+      <button
+          *ngIf="!largeScreen"
+          class="uk-navbar-toggle"
+          id="toggle-button"
+          (click)="toggleSidebar()"
+        >
+        <i class="ri-menu-3-fill"></i>
+      </button>
+      <div class="logo_cont">
+        <img src="assets/logo.svg" class="logo" />
+        <b class="logo_text">India Tours & Cabs
+        </b>
+      </div>
+    
+      <div class="user">
+          <button class="notificationbtn">
+    
+            <i class="ri-notification-3-line" 
+            routerLink="/admin/notification" ></i>
+          </button>
+        <button class="userdata" >
+  
+          <img
+          src="https://i.pravatar.cc/300"
+          alt=""
+          routerLink="../admin/profile"
+          />
+  
+          <b class="name">name </b>
+        </button>
+      </div>
+  
+    </header>
+    
+    <div id="overlay" (click)="showSidebar && toggleSidebar()"></div>
+    
+  </main>
+  <div id="wrapper" (window:resize)="onWindowResize()">
+    
+        <div
+          [style]="largeScreen || showSidebar ? '' : 'display: none'"
+          id="sidebar-container"
+        >
+          <aside id="sidebar">
+        
+            <ul id="sidebar-ul">
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/dashboard"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-dashboard-2-line"></i>
+                  <span class="sidebar-text">Dashboard</span></a
+                >
+              </li> 
+               
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/tour"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  ><i class="ri-archive-line"></i>
+                  <span class="sidebar-text">Tour</span></a
+                >
+              </li>
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/booking"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-file-text-line"></i>
+                  <span class="sidebar-text">Booking</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/users"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-user-line"></i>
+                <span class="sidebar-text">User</span></a
+                >
+              </li>
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/drivers"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-shield-user-line"></i>
+                  <span class="sidebar-text">Drivers</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/vehicles"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-shield-user-line"></i>
+                  <span class="sidebar-text">Vehicles</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/services"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-shield-user-line"></i>
+                  <span class="sidebar-text">Edit service</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/reviews"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-shield-user-line"></i>
+                  <span class="sidebar-text">Review</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/blogs"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-shield-user-line"></i>
+                  <span class="sidebar-text">Blog</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/queries"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-shield-user-line"></i>
+                  <span class="sidebar-text">Queries</span></a
+                >
+              </li> 
+              <li class="sidebar-li">
+                <a
+                  routerLink="/admin/settings"
+                  routerLinkActive="active"
+                  (click)="toggleSidebar()"
+                  class="sidebar-li-a"
+                  >
+                  <i class="ri-shield-user-line"></i>
+                  <span class="sidebar-text">Settings</span></a
+                >
+              </li> 
+            </ul>
+          </aside>
+        </div>
+        <div id="container">
+          <router-outlet></router-outlet>
+        </div>
+  </div>
+    
+  

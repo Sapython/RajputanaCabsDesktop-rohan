@@ -1,0 +1,26 @@
+<div class="background"></div>
+<div class="left"></div>
+<div class="right"></div>
+<div class="bottom"></div>
+
+<div class="d-flex h-100 w-100 justify-content-center align-items-center">
+    <div class="card">
+        <div class="text-center Nunito600 fs-22 mb-4 ">Sign Up</div>
+        <form action="" class="d-flex flex-column w-100" [formGroup]="signupForm" (ngSubmit)="signUpWithEmailAndPassword()">
+            <input class="my-2" type="text" placeholder="Your Name" style="width: 300px;" formControlName="username">
+            <input class="my-2" type="email" placeholder="Email" style="width: 300px;" formControlName="email">
+
+            <input class="my-2" type="password" placeholder="Password" formControlName="password">
+
+            <div class="mb-5">Forget Password</div>
+            <button mat-raised-button>Log in</button>
+
+        </form>
+        <div class="text-center mt-4 Nunito400 fs-14">Already have an Account?<a routerLink="/login" class="t-blue"> Log in</a></div>
+        <div class="border w-100 my-2"></div>
+        <div class="text-center Nunito400 fs-14">Or use another method</div>
+        <div class="w-100 d-flex justify-content-center align-items-center py-2" (click)="authService.signUpWithGoogle()">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAYAAACM/rhtAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD4UlEQVR4nO3YXWxTZRwG8Pe8/fLCYGLIMnQyY5A4yFYXASNb2zkEnA42oihfG+LMdCKC61i/7A5s2DXdcJRRcEpGMqYui3O0p6ddEVO6qPHCL5x3Ko6hDGdMvDAuzOlj2lgkbKen7TkbxOxJntv/+fXf9z1pSshc5iIcWMmdsFAraugAquk57KDnsZ0Oo4p+g52URy21w0oWkNkM3EQDI3MI25gxFBFAJ1IDAbYyY6hlHGAJnVlcHeNCGTMhitIJ9Anmd+ylVvlhTSQbz9KRtGG667qd+RavkNvlwe1XGrBOwtZ0At3A/AGLKk8azqQoRgkzKTtOF90iHQZL1OnjnGQhypkrM4LbRi9gF9FI214l/Un0QQ//u4laxo0mRTFYMh8syYBFsQp7mKOooCOxWyzn5mI4E+MQxVXSi2hSrhSdZVcasJWOyocLEyVcyrHYdqaD6Qmwm76f0kyWUBiZZsm42LBB1SZENECPOnrTpgJfpv2SHyIliKhPx4DRntEAuxX/4Sroj+RGBh+Q2xDRTF4FxutRAWsZgFXqbywwon58Ci5eXtOXzIy6dvb1dGs7bKs/8Gbd/YmAZkHgoGpTMsAF9V9DSl845PILA8+qjwkD1YtnA1jRemwoEbBbEBgmt84G8CnnW+dvauDmlo7vbuqvuLrt4BeJgCbhDao2zwbwxTYXlwj42HS4ycgt4EL3fpwMsC6J10lBo29cCNjgMVuEgZ+SeYho/rwW92t4HsycAWX9Zej250p+UTe9YdTfZfpyWly2+TN0dW3ISDgAZ9WhOG7ow0xUektQ2l8eq5HTj0oFrm8+eVloeyWOd34RHYCI6um/Ixq8F8qJbS2Oi7eVX+FLF1fjbuETnT+Lx+YSB/YSxWF+2W/Xw+Jd11+Gg8HlKSNr3C3cHaZzgrhlDacnWHZjcj/Hjg/kNgoB4633GS71hHJEz+QJXluw11c0+lznHiw0fy4INLY3Nqf0iW3+wotiyPJT62H260fag/mek4Gla/pC92S8HV48v5PPK3bzD3jMnH7k2mOyo7sK99k+moIrdXRfIqkmEFiU9bzvkStiyNIUu6VnCx7cF7iKy284M8G2me4m6eREUFv0jHftpNzIjX1P4lFnF5baBv+yHLGvIlLybjBHV+VdI/smd3pXj7/WsctA5EhfYFGWnSu8IBfOzhUO+8PZmUTuHA1oHdXe1Wlv8yVf8XgHr91HZjK9vUvUnkB+q4kz/By9xaLn7VQprJzuckcwzxl9x84obgo2vCSzM5BrcvIr+AP8Q1+96i/83sYV/LDfv3KoNbDcfzygNX0ykCXPv1hz+b/mH8tFGJKxwBmaAAAAAElFTkSuQmCC">
+        </div>
+    </div>
+</div>

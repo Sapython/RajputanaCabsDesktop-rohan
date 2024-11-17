@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+:root{
+    --color-primary: #404B69;
+    --color-secondary: #404B69;
+    --color-tertiary: #FFFFFF;
+    --color-quaternary: #EFFFEA;
+    --color-quinary: #000000;
+    --large: 1.4rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@import url('./assets/scss/Fonts.scss');
+@import url('./assets/scss/Text.scss');
+@import url('./assets/scss/Responsive.scss');
+
+.outstation {
+    background: rgba(211, 127, 7, 0.15);
+    border: 2px solid #D37F07;
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: #D37F07;
+}
+
+.transId {
+    color: #3F6389;
+    ;
+}
+
+.status {
+    color: #198024;
+}
+
+.payMethod {
+    background: #DEF0FF;
+    border: 2px solid #3E94E0;
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: #3E94E0;
+}
+
+.amount {
+    background: rgba(25, 128, 36, 0.1);
+    border: 2px solid #198024;
+    border-radius: 20px;
+    padding: 10px 24px;
+    color: #198024;
+}
+
+.button {
+    background: linear-gradient(138.32deg, rgba(0, 0, 0, 0.5) 8.26%, rgba(255, 255, 255, 0.5) 91.02%), #EAECF0;
+    background-blend-mode: soft-light, normal;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: -5px -5px 8px #F2F4F8, 5px 5px 7px rgba(174, 174, 192, 0.5);
+    border-radius: 6px;
+    color: #383A69;
+    padding: 0 20px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    letter-spacing: -0.408px;
+    font-family: 'Nunito', sans-serif;
+    color: #383A69;
+}
+.mat-step-header .mat-step-icon-selected, .mat-step-header .mat-step-icon-state-done, .mat-step-header .mat-step-icon-state-edit{
+    background-color: #D37F07;
+    color: #ffffff;
+}
